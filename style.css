@@ -225,15 +225,6 @@ code[class*=language-] {
   margin-bottom: 0.5rem;
 }
 
-.quick-links {
-  list-style: none;
-  margin-left: 0;
-}
-
-.quick-links li {
-  display: inline;
-}
-
 code[class*=language-],
 pre[class*=language-] {
   color: #393a34;
@@ -325,4 +316,10 @@ pre[class*=language-] {
 
 .token.italic {
   font-style: italic;
+}
+
+.github-btn {
+  display: inline-block;
+  vertical-align: middle;
+  border: 0;
 }
