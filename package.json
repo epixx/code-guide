@@ -1,0 +1,24 @@
+{
+  "name": "code_guide",
+  "version": "1.0.0",
+  "description": "Руководство по написанию кода",
+  "scripts": {
+    "test": "yaspeller -e \".md,.html,.css\" .",
+    "precommit": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:epixx/code-guide.git"
+  },
+  "keywords": [],
+  "author": "Nikolay Gromov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/epixx/code-guide/issues"
+  },
+  "homepage": "https://github.com/epixx/code-guide#readme",
+  "devDependencies": {
+    "husky": "^0.13.1",
+    "yaspeller": "^3.0.0"
+  }
+}

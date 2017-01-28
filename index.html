@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title>Руководство по написанию кода</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic|PT+Mono&subset=latin,cyrillic">
+  </head>
+  <body>
+
+<header class="masthead">
+  <div class="container">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 316.824 48.498" width="280" height="46"><g fill="#fff"><path d="M11.94 14.809c0 7.034-2.545 8.978-4.073 9.44 1.528.462 4.073 2.545 4.073 9.626 0 6.664 1.434 8.283 4.535 9.487l-3.378 5.136c-3.841-1.296-7.96-4.119-7.96-11.986 0-7.404-2.407-9.255-5.137-9.255v-5.924c2.731 0 5.137-1.897 5.137-9.302 0-7.868 4.119-10.737 7.96-12.032l3.378 5.276c-2.962 1.111-4.535 2.823-4.535 9.534zM316.824 27.211c-2.731 0-5.137 1.897-5.137 9.256 0 7.867-4.119 10.736-7.96 12.032l-3.331-5.276c2.915-1.156 4.488-2.822 4.488-9.486 0-7.035 2.546-9.025 4.072-9.487-1.526-.462-4.072-2.499-4.072-9.58 0-6.663-1.434-8.283-4.488-9.486l3.331-5.184c3.842 1.296 7.96 4.165 7.96 12.032 0 7.404 2.406 9.302 5.137 9.302v5.877z"></path></g><path d="M50.76 8.167v6.525h-16.613v5.784h11.893v6.387h-11.893v7.034h16.613v6.525h-24.064v-32.255h24.064zM55.667 40.422v-32.255h18.003c6.616 0 8.839 4.721 8.839 11.338 0 5.831-2.776 10.875-8.793 10.875h-10.598v10.042h-7.451zm15.41-16.197c1.943 0 3.24-1.342 3.24-4.721 0-3.517-1.112-4.952-3.147-4.952h-8.052v9.672h7.959zM94.772 8.167v32.255h-7.451v-32.255h7.451zM116.106 7.38c3.008 0 6.897.462 9.349 1.157l-1.436 6.571c-1.573-.556-4.304-.88-6.339-.88-6.479 0-8.885.926-8.885 9.858 0 8.885 2.406 10.088 8.885 10.088 2.035 0 4.767-.371 6.339-.879l1.436 6.71c-2.499.648-6.341 1.064-9.349 1.064-10.366 0-15.271-3.933-15.271-17.076-.001-13.188 4.905-16.613 15.271-16.613zM162.57 15.293c-1.945-.555-5.276-1.064-8.84-1.064-4.812 0-6.201.926-6.201 3.147 0 2.036.925 2.776 6.525 3.378 7.359.833 10.645 3.656 10.645 9.811 0 7.96-4.257 10.505-14.3 10.505-3.888 0-7.868-.602-10.46-1.527l1.528-6.387c2.082.556 5.322 1.064 8.839 1.064 4.813 0 6.341-.694 6.341-3.146 0-2.037-.88-3.008-6.942-3.656-6.895-.74-10.136-3.008-10.136-8.978 0-8.006 4.628-11.06 14.208-11.06 3.887 0 7.775.601 10.319 1.527l-1.526 6.386z" fill="#fff"></path><path d="M177.704 40.422h-7.451v-32.255h7.451v32.255zm12.171 0c-5.832-10.69-10.413-16.29-12.126-17.03 1.76-1.435 6.247-6.895 11.338-15.225h8.885c-5.368 8.33-9.486 13.466-10.921 14.809 1.387 1.064 6.015 6.757 11.8 17.447h-8.976z" fill="#fff"></path><path d="M209.359 8.167v32.255h-7.451v-32.255h7.451zM224.399 8.167v25.684h14.53v6.571h-21.981v-32.255h7.451zM249.992 8.167v25.684h14.53v6.571h-21.981v-32.255h7.451zM289.236 15.293c-1.945-.555-5.276-1.064-8.84-1.064-4.812 0-6.201.926-6.201 3.147 0 2.036.925 2.776 6.525 3.378 7.359.833 10.645 3.656 10.645 9.811 0 7.96-4.257 10.505-14.3 10.505-3.888 0-7.868-.602-10.46-1.527l1.528-6.387c2.082.556 5.322 1.064 8.839 1.064 4.813 0 6.341-.694 6.341-3.146 0-2.037-.88-3.008-6.942-3.656-6.895-.74-10.136-3.008-10.136-8.978 0-8.006 4.628-11.06 14.208-11.06 3.887 0 7.775.601 10.319 1.527l-1.526 6.386z" fill="#fff"></path></svg>
+    <h1>Руководство по написанию кода</h1>
+    <p class="lead">Стандарты для разработки гибкого, надежного и поддерживаемого кода на HTML и CSS.</p>
+  </div>
+</header>
+
+
+
+<div class="heading" id="toc">
+  <h2>Оглавление</h2>
+</div>
+<div class="section toc">
+  <div class="col">
+    <h4><a href="#html">HTML</a></h4>
+    <ul>
+      <li>
+        <a href="#html-syntax">Синтаксис</a>
+      </li>
+      <li>
+        <a href="#html-required">Обязательные компоненты разметки</a>
+      </li>
+      <li>
+        <a href="#html-style-script">Подключение CSS и JavaScript</a>
+      </li>
+      <li>
+        <a href="#html-attribute-order">Порядок атрибутов</a>
+      </li>
+      <li>
+        <a href="#html-other">Разное</a>
+      </li>
+    </ul>
+  </div>
+  <div class="col">
+    <h4><a href="#css">CSS</a></h4>
+    <ul>
+      <li>
+        <a href="#css-syntax">Синтаксис</a>
+      </li>
+      <li>
+        <a href="#css-classes">Селекторы</a>
+      </li>
+      <li>
+        <a href="#css-declaration-order">Порядок объявления</a>
+      </li>
+      <li>
+        <a href="#css-import">Не используйте @import</a>
+      </li>
+      <li>
+        <a href="#css-media-queries">@media</a>
+      </li>
+      <li>
+        <a href="#css-prefixed-properties">Свойства с префиксами</a>
+      </li>
+      <li>
+        <a href="#css-shorthand">Сокращенная запись</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
+
+<div class="section" id="golden-rule">
+  <div class="col">
+    <h2>Золотое правило</h2>
+    <p>Соблюдайте предложенные здесь соглашения. Если вы нашли ошибку, <a href="https://github.com/epixx/code-guide/issues/new">сообщите об этом</a>. Если у вас есть что дополнить или вы хотите принять участие в разработке этих соглашений, пожалуйста, <a href="https://github.com/epixx/code-guide/issues/new">создайте issue на GitHub</a>.</p>
+  </div>
+  <div class="col">
+    <blockquote>
+      <p>Вне зависимости от количества разработчиков, код в любом проекте должен быть написан так, словно его писал один человек.</p>
+    </blockquote>
+  </div>
+</div>
+
+
+
+<div class="heading" id="html">
+  <h2>HTML</h2>
+</div>
+
+<div class="section" id="html-syntax">
+  <div class="col">
+    <h3>Синтаксис</h3>
+    <ul>
+      <li>Теги и атрибуты пишите строчными буквами.</li>
+      <li>Используйте отступы с двумя пробелами. Разместите файл <a href="/.editorconfig">.editorconfig</a> (универсальные базовые настройки редактора) в папке проекта и <a href="http://editorconfig.org/#download">установите его поддержку</a> в редакторе.</li>
+      <li>Вложенные элементы должны иметь отступ. Некоторые теги («<dfn title="Сейчас нет разделения на блочные и строчные теги, поэтому термин взят в кавычки.">изначально-строчные</dfn>», к примеру: <code>a</code>, <code>span</code>, <code>small</code>, <code>strong</code>, <code>em</code>, <code>i</code>, <code>kbd</code>, <code>code</code>) допустимо не переносить на новые строки.</li>
+      <li>В атрибутах всегда используйте двойные кавычки, но не одинарные.</li>
+      <li>Не добавляйте слэш (<code>/</code>) в конец одиночного тега.</li>
+      <li>Не пропускайте необязательные закрывающие теги (например, <code>&lt;/li&gt;</code> или <code>&lt;/body&gt;</code>).</li>
+    </ul>
+  </div>
+  <div class="col">
+    <pre class="code">
+      <code class="lang-html">&lt;nav class=&quot;main-nav&quot;&gt;</code>
+      <code class="lang-html">  &lt;ul&gt;</code>
+      <code class="lang-html">    &lt;li&gt;&lt;a href=&quot;/index.html&quot;&gt;&Gcy;&lcy;&acy;&vcy;&ncy;&acy;&yacy;&lt;/a&gt;&lt;/li&gt;</code>
+      <code class="lang-html">    &lt;li&gt;&lt;a href=&quot;/contacts.html&quot;&gt;&Kcy;&ocy;&ncy;&tcy;&acy;&kcy;&tcy;&ycy;&lt;/a&gt;&lt;/li&gt;</code>
+      <code class="lang-html">  &lt;/ul&gt;</code>
+      <code class="lang-html">&lt;/nav&gt;</code>
+      <code class="lang-html">&lt;br&gt;</code>
+      <code class="lang-html">&lt;img src=&quot;logo.svg&quot; width="50" height="50" alt=&quot;Company&quot;&gt;</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="html-required">
+  <div class="col">
+    <h3>Обязательные компоненты разметки</h3>
+    <ul>
+      <li>Всегда указывайте <code>&lt;!DOCTYPE html&gt;</code></li>
+      <li>Указывайте подходящий <code>lang</code> для <code>&lt;html&gt;</code></li>
+      <li>В самом начале секции <code>&lt;head&gt;</code> указывайте кодировку (обычно <code>UTF-8</code>)</li>
+    </ul>
+  </div>
+  <div class="col">
+    <pre class="code">
+      <code class="lang-html">&lt;!DOCTYPE html&gt;</code>
+      <code class="lang-html">&lt;html lang="ru"&gt;</code>
+      <code class="lang-html">  &lt;head&gt;</code>
+      <code class="lang-html">    &lt;meta charset=&quot;UTF-8&quot;&gt;</code>
+      <code class="lang-html">    &lt;title&gt;&Zcy;&acy;&gcy;&ocy;&lcy;&ocy;&vcy;&ocy;&kcy; &scy;&tcy;&rcy;&acy;&ncy;&icy;&tscy;&ycy;&lt;/title&gt;</code>
+      <code class="lang-html">  &lt;/head&gt;</code>
+      <code class="lang-html">  &lt;body&gt;</code>
+      <code class="lang-html">    &lt;img src=&quot;logo.svg&quot; width="50" height="50" alt=&quot;Company&quot;&gt;</code>
+      <code class="lang-html">    &lt;h1&gt;&Pcy;&rcy;&icy;&vcy;&iecy;&tcy;, &mcy;&icy;&rcy;!&lt;/h1&gt;</code>
+      <code class="lang-html">  &lt;/body&gt;</code>
+      <code class="lang-html">&lt;/html&gt;</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="html-style-script">
+  <div class="col">
+    <h3>Подключение CSS и JavaScript</h3>
+    <p>При подключении CSS и JavaScript файлов не указывайте атрибут <code>type</code> (<code>text/css</code> для стилей и <code>text/javascript</code> для скриптов являются значениями по умолчанию).</p>
+    <p>CSS-файлы подключайте в <code>&lt;head&gt;</code>, JavaScript-файлы — перед <code>&lt;/body&gt;</code></p>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-html">&lt;!-- &Vcy;&ncy;&iecy;&shcy;&ncy;&icy;&jcy; CSS --&gt;</code>
+      <code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>
+      <code class="lang-html"> </code>
+      <code class="lang-html">&lt;!-- Внешний JavaScript --&gt;</code>
+      <code class="lang-html">&lt;script src=&quot;script.js&quot;&gt;&lt;/script&gt;</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="html-attribute-order">
+  <div class="col">
+    <h3>Порядок атрибутов</h3>
+    <p>Указывайте атрибут <code>class</code> первым, а <code>data-*</code>, <code>aria-*</code>, <code>role</code> и логические атрибуты последними.</p>
+    <p>Очередность атрибутов должна быть единообразной.</p>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-html">&lt;a class=&quot;btn&quot; href=&quot;#modal-call-me&quot; data-modal=&quot;toggle&quot;&gt;Перезвоните&lt;/a&gt;</code>
+      <code class="lang-html"> </code>
+      <code class="lang-html">&lt;input type=&quot;text&quot; class=&quot;field-text&quot; disabled&gt;</code>
+      <code class="lang-html"> </code>
+      <code class="lang-html">&lt;img src=&quot;logo.svg&quot; width="50" height="50" alt=&quot;Company&quot;&gt;</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="html-other">
+  <div class="col">
+    <h3>Разное</h3>
+    <ul>
+      <li>Документ должен проходить <a href="http://validator.w3.org/nu/">проверку на валидность</a>.</li>
+      <li>Разделяйте крупные фрагменты разметки пустыми строками,</li>
+      <li>Оставляйте закомментированные фрагменты разметки только если это блоки, выводимые по условию (например, для авторизованных посетителей).</li>
+      <li>Для тегов <code>&lt;img&gt;</code> должны быть указаны размеры (в пикселях или процентах).</li>
+    </ul>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-html">&lt;header class=&quot;page-header&quot;&gt;</code>
+      <code class="lang-html">  &lt;a href=&quot;/&quot; class=&quot;logo&quot;&gt;</code>
+      <code class="lang-html">    &lt;img src=&quot;logo.svg&quot; width="50" height="50" alt=&quot;Company&quot;&gt;</code>
+      <code class="lang-html">  &lt;/a&gt;</code>
+      <code class="lang-html">  ...</code>
+      <code class="lang-html">  &lt;a href=&quot;/login&quot; class=&quot;login&quot;&gt;&Vcy;&ocy;&jcy;&tcy;&icy;&lt;/a&gt;</code>
+      <code class="lang-html">  &lt;!-- &lt;a href=&quot;/logout&quot; class=&quot;login&quot;&gt;&Vcy;&ycy;&jcy;&tcy;&icy;&lt;/a&gt; --&gt;</code>
+      <code class="lang-html">&lt;/header&gt;</code>
+      <code class="lang-html"> </code>
+      <code class="lang-html">&lt;section class=&quot;catalog&quot;&gt;</code>
+      <code class="lang-html">  ...</code>
+      <code class="lang-html">&lt;/section&gt;</code>
+    </pre>
+  </div>
+</div>
+
+
+
+
+
+<div class="heading" id="css">
+  <h2>CSS</h2>
+</div>
+
+<div class="section" id="css-syntax">
+  <div class="col">
+    <h3>Синтаксис</h3>
+    <ul>
+      <li>Используйте отступы с двумя пробелами. Разместите файл <a href="/.editorconfig">.editorconfig</a> (универсальные базовые настройки редактора) в папке проекта и <a href="http://editorconfig.org/#download">установите его поддержку</a> в редакторе.</li>
+      <li>Селекторы, объявления и значения пишите строчными буквами.</li>
+      <li>При группировке селекторов пишите каждый селектор на отдельной строке.</li>
+      <li>До и после комбинаторов в селекторах ставьте пробел (пример: <code>.foo > .bar</code>).</li>
+      <li>Оставляйте один пробел перед открывающейся фигурной скобкой. После открывающей фигурной скобки ставьте перенос строки.</li>
+      <li>Пишите закрывающуюся фигурную скобку на новой строке и на том же уровне отступа, что её селектор.</li>
+      <li>Оставляйте один пробел после <code>:</code> для каждого объявления. Не ставьте пробел перед двоеточием.</li>
+      <li>Каждое объявление пишите на отдельной строке.</li>
+      <li>Завершайте все объявления точкой с запятой.</li>
+      <li>Для свойств со множественными значениями оставляйте пробел после каждой запятой (см. <code>box-shadow</code>).</li>
+      <li>Не оставляйте пробелов после запятых <em>внутри</em> значений <code>rgb()</code>, <code>rgba()</code>, <code>hsl()</code>, <code>hsla()</code>, или <code>rect()</code>.</li>
+      <li>Добавляйте начальный ноль для значений (пример: <code>0.5</code> вместо <code>.5</code>).</li>
+      <li>Все 16-ричные значения записывайте строчными буквами (пример: <code>#fff</code> вместо <code>#FFF</code>).</li>
+      <li>Сокращайте 16-ричные значения везде, где это возможно (пример: <code>#fff</code> вместо <code>#ffffff</code>).</li>
+      <li>Всегда берите в кавычки значения атрибутов внутри селектора (пример: <code>input[type="text"]</code>).</li>
+      <li>Опускайте единицы измерения там, где это возможно (пример: <code>margin: 0;</code> вместо <code>margin: 0px;</code>).</li>
+    </ul>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-css">/* Хороший CSS */</code>
+      <code class="lang-css">.selector > .some,</code>
+      <code class="lang-css">.selector-secondary {</code>
+      <code class="lang-css">  padding: 15px;</code>
+      <code class="lang-css">  margin: 0 0 15px;</code>
+      <code class="lang-css">  line-height: 1;</code>
+      <code class="lang-css">  background-color: rgba(0,0,0,0.5);</code>
+      <code class="lang-css">  box-shadow: 0 1px 2px #ccc, inset 0 1px 0 #fff;</code>
+      <code class="lang-css">}</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">/* Плохой CSS */</code>
+      <code class="lang-css">.selector>.some ,.selector-secondary{</code>
+      <code class="lang-css">  padding:15px;</code>
+      <code class="lang-css">    margin:0 0px 15px;</code>
+      <code class="lang-css">   line-height :1em;</code>
+      <code class="lang-css">  background-color: rgba(0, 0, 0, .5);</code>
+      <code class="lang-css">  box-shadow:0 1px 2px #ccc,inset 0 1px 0 #FFF;}</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="css-classes">
+  <div class="col">
+    <h3>Селекторы</h3>
+    <ul>
+      <li>Используйте классы.</li>
+      <li>Используйте короткие селекторы — избегайте составных селекторов.</li>
+      <li>Избегайте тегов в селекторах.</li>
+      <li>Записывайте имена классов строчными буквами и используйте дефис <code>-</code> в местах разделения слов (не используйте как разделитель слов <b>один символ</b> нижнего подчеркивания, не используйте camelCase).</li>
+      <li>Используйте английский язык. Не используйте транслит.</li>
+      <li>Избегайте сокращений. Смотрите короткий <a href="abbreviations.md">словарь допустимых сокращений</a>.</li>
+      <li>Придумывайте короткие и ёмкие имена. (см. <a href="https://github.com/yoksel/common-words">слова, часто используемые в CSS-классах</a>)</li>
+      <li>Имя класса должно отвечать на вопросы «Что это?» или «Зачем это нужно?» и не должно отвечать на вопрос «Как это выглядит?», если только это не дополнительный модифицирующий класс.</li>
+      <li>Используйте имена классов с префиксом <code>.js-*</code> для работы с JavaScript. Такие классы должны отсутствовать в CSS.</li>
+    </ul>
+    <p>Используйте <a href="https://ru.bem.info/methodology/naming-convention/">БЭМ-именование</a>, если знакомы с этой методологией.</p>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-css">/* Хорошие селекторы */</code>
+      <code class="lang-css">.pahe-header { ... }</code>
+      <code class="lang-css">.comment { ... }</code>
+      <code class="lang-css">.sidebar { ... }</code>
+      <code class="lang-css">.gallery { ... }</code>
+      <code class="lang-css">.gallery__item { ... }</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">/* Плохие селекторы */</code>
+      <code class="lang-css">.t { ... }</code>
+      <code class="lang-css">.root span a { ... }</code>
+      <code class="lang-css">.red { ... }</code>
+      <code class="lang-css">.my_block { ... }</code>
+      <code class="lang-css">.HeaderOfMyBlock { ... }</code>
+      <code class="lang-css">.eto-moy-perviy-klass { ... }</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="css-declaration-order">
+  <div class="col">
+    <h3>Порядок объявления</h3>
+    <p>Объявления логически связанных свойств должны быть сгруппированы в следующем порядке:</p>
+    <ol>
+      <li>Позиционирование</li>
+      <li>Блочная модель и размеры</li>
+      <li>Текстовые свойства</li>
+      <li>Отображение</li>
+      <li>Остальное</li>
+      <li>Плавные переходы, анимация</li>
+    </ol>
+    <p>Позиционирование может удалить элемент из нормального потока документа и переопределить блочную модель связанных стилей, поэтому указывайте его первым. Блочная модель диктует размеры и расположение компонента, пишите ее второй.</p>
+    <p>В примере кода группы правил разделены пустыми строками. Делать такие разделители не обязательно.</p>
+    <p>В случае совместного использования сокращенной и полной записи свойств, первым пишите сокращенную версию.</p>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-css">.selector {</code>
+      <code class="lang-css">  position: absolute;</code>
+      <code class="lang-css">  top: 0;</code>
+      <code class="lang-css">  right: 0;</code>
+      <code class="lang-css">  bottom: 0;</code>
+      <code class="lang-css">  left: 0;</code>
+      <code class="lang-css">  z-index: 100;</code>
+      <code class="lang-css">   </code>
+      <code class="lang-css">  display: block;</code>
+      <code class="lang-css">  float: right;</code>
+      <code class="lang-css">  width: 100px;</code>
+      <code class="lang-css">  height: 100px;</code>
+      <code class="lang-css">   </code>
+      <code class="lang-css">  font: 13px/1.5 "Helvetica Neue", sans-serif;</code>
+      <code class="lang-css">  color: #333;</code>
+      <code class="lang-css">  text-align: center;</code>
+      <code class="lang-css">   </code>
+      <code class="lang-css">  background-color: #f5f5f5;</code>
+      <code class="lang-css">  border: 1px solid #e5e5e5;</code>
+      <code class="lang-css">  border-radius: 3px;</code>
+      <code class="lang-css">  opacity: 1;</code>
+      <code class="lang-css">   </code>
+      <code class="lang-css">  transition: all 0.3s;</code>
+      <code class="lang-css">}</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="css-import">
+  <div class="col">
+    <h3>Не используйте <code>@import</code></h3>
+    <p>По сравнению с тегом <code>&lt;link&gt;</code> правило <code>@import</code> работает медленнее и может вызвать иные непредвиденные проблемы. Не используйте <code>@import</code>, используйте альтернативные подходы:</p>
+    <ul>
+      <li>Компилируйте ваш CSS-код в один файл с помощью препроцессоров</li>
+      <li>Склеивайте ваши CSS-файлы любым другим способом</li>
+      <li>Используйте несколько тегов <code>&lt;link&gt;</code></li>
+    </ul>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-html">&lt;!-- &Icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&jcy;&tcy;&iecy; &tcy;&iecy;&gcy; link --&gt;</code>
+      <code class="lang-html">&lt;link rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;</code>
+      <code class="lang-html"> </code>
+      <code class="lang-html">&lt;!-- &Ncy;&iecy; &icy;&scy;&pcy;&ocy;&lcy;&softcy;&zcy;&ucy;&jcy;&tcy;&iecy; @imports --&gt;</code>
+      <code class="lang-html">&lt;style&gt;</code>
+      <code class="lang-css">  @import url(&quot;more-styles.css&quot;); /* Плохо! Не надо так! */</code>
+      <code class="lang-html">&lt;/style&gt;</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="css-media-queries">
+  <div class="col">
+    <h3><code>@media</code></h3>
+    <p>Помещайте media queries настолько близко к соответствующим наборам правил, насколько это возможно. Не объединяйте их в отдельную таблицу стилей, не помещайте их в конце файла.</p>
+    <p>Ставьте пробелы вокруг полукруглых скобок.</p>
+    <p>Ставьте пробел перед указанием значения в условии.</p>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-css">/* В CSS-файле (без препроцессоров): */</code>
+      <code class="lang-css">.element {</code>
+      <code class="lang-css">  display: block;</code>
+      <code class="lang-css">}</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">@media (min-width: 480px) {</code>
+      <code class="lang-css">  .element {</code>
+      <code class="lang-css">    display: none;</code>
+      <code class="lang-css">  }</code>
+      <code class="lang-css">}</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">/* В препроцессорном файле: */</code>
+      <code class="lang-css">.element {</code>
+      <code class="lang-css">  display: block;</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">  @media (min-width: $screen-sm) {</code>
+      <code class="lang-css">    display: none;</code>
+      <code class="lang-css">  }</code>
+      <code class="lang-css">}</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="css-prefixed-properties">
+  <div class="col">
+    <h3>Свойства с префиксами</h3>
+    <p>Оставляйте отступы для каждого свойства так, чтобы значения выстраивались в вертикальную линию.</p>
+    <p>Не пишите свойства с вендорными префиксами вручную. Используете <a href="https://github.com/postcss/autoprefixer">Autoprefixer</a> в рамках автоматизации или его <a href="https://autoprefixer.github.io/ru/">он-лайн</a> сервис.</p>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-css">.selector {</code>
+      <code class="lang-css">  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);</code>
+      <code class="lang-css">          box-shadow: 0 1px 2px rgba(0,0,0,0.15);</code>
+      <code class="lang-css">}</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="css-shorthand">
+  <div class="col">
+    <h3>Сокращенная запись</h3>
+    <p>Избегайте сокращенных объявлений.</p>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-css">/* Хорошо */</code>
+      <code class="lang-css">.element {</code>
+      <code class="lang-css">  margin-bottom: 10px;</code>
+      <code class="lang-css">  background-color: red;</code>
+      <code class="lang-css">  background-image: url("image.jpg");</code>
+      <code class="lang-css">  border-top-left-radius: 3px;</code>
+      <code class="lang-css">  border-top-right-radius: 3px;</code>
+      <code class="lang-css">}</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">/* Плохо */</code>
+      <code class="lang-css">.element {</code>
+      <code class="lang-css">  margin: 0 0 10px;</code>
+      <code class="lang-css">  background: red;</code>
+      <code class="lang-css">  background: url("image.jpg");</code>
+      <code class="lang-css">  border-radius: 3px 3px 0 0;</code>
+      <code class="lang-css">}</code>
+    </pre>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>&lt;3</p>
+  <p>Вдохновлено <a href="http://sadcitizen.me/code-guide/">кодгайдом от @mdo</a>.</p>
+  <p><a href="https://epixx.ru/">Школа интернет-технологий Epic Skills</a>.</p>
+  <ul class="quick-links">
+    <li>
+      <iframe class="github-btn" src="http://ghbtns.com/github-btn.html?user=epixx&repo=code-guide&type=watch&count=true" allowtransparency="true" frameborder="0" scrolling="0" width="112px" height="20px"></iframe>
+    </li>
+  </ul>
+</footer>
+
+<script>
+/* http://prismjs.com/download.html?themes=prism-solarizedlight&languages=markup+css */
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var i=r[e];if(2==arguments.length){a=arguments[1];for(var l in a)a.hasOwnProperty(l)&&(i[l]=a[l]);return i}var o={};for(var s in i)if(i.hasOwnProperty(s)){if(s==t)for(var l in a)a.hasOwnProperty(l)&&(o[l]=a[l]);o[s]=i[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var i in e)e.hasOwnProperty(i)&&(t.call(e,i,e[i],a||i),"Object"!==n.util.type(e[i])||r[n.util.objId(e[i])]?"Array"!==n.util.type(e[i])||r[n.util.objId(e[i])]||(r[n.util.objId(e[i])]=!0,n.languages.DFS(e[i],t,i,r)):(r[n.util.objId(e[i])]=!0,n.languages.DFS(e[i],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,i=a.elements||document.querySelectorAll(a.selector),l=0;r=i[l++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var i,l,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(i=(o.className.match(e)||[,""])[1].toLowerCase(),l=n.languages[i]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+i,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+i);var s=t.textContent,u={element:t,language:i,grammar:l,code:s};if(n.hooks.run("before-sanity-check",u),!u.code||!u.grammar)return u.code&&(u.element.textContent=u.code),n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var g=new Worker(n.filename);g.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},g.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var i=n.tokenize(e,t);return a.stringify(n.util.encode(i),r)},tokenize:function(e,t){var a=n.Token,r=[e],i=t.rest;if(i){for(var l in i)t[l]=i[l];delete t.rest}e:for(var l in t)if(t.hasOwnProperty(l)&&t[l]){var o=t[l];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],g=u.inside,c=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;if(h&&!u.pattern.global){var p=u.pattern.toString().match(/[imuy]*$/)[0];u.pattern=RegExp(u.pattern.source,p+"g")}u=u.pattern||u;for(var m=0,y=0;m<r.length;y+=r[m].length,++m){var v=r[m];if(r.length>e.length)break e;if(!(v instanceof a)){u.lastIndex=0;var b=u.exec(v),k=1;if(!b&&h&&m!=r.length-1){if(u.lastIndex=y,b=u.exec(e),!b)break;for(var w=b.index+(c?b[1].length:0),_=b.index+b[0].length,A=m,P=y,j=r.length;j>A&&_>P;++A)P+=r[A].length,w>=P&&(++m,y=P);if(r[m]instanceof a||r[A-1].greedy)continue;k=A-m,v=e.slice(y,P),b.index-=y}if(b){c&&(f=b[1].length);var w=b.index+f,b=b[0].slice(f),_=w+b.length,x=v.slice(0,w),O=v.slice(_),S=[m,k];x&&S.push(x);var N=new a(l,g?n.tokenize(b,g):b,d,b,h);S.push(N),O&&S.push(O),Array.prototype.splice.apply(r,S)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,i=0;r=a[i++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.length=0|(a||"").length,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var i={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==i.type&&(i.attributes.spellcheck="true"),e.alias){var l="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(i.classes,l)}n.hooks.run("wrap",i);var o=Object.keys(i.attributes).map(function(e){return e+'="'+(i.attributes[e]||"").replace(/"/g,"&quot;")+'"'}).join(" ");return"<"+i.tag+' class="'+i.classes.join(" ")+'"'+(o?" "+o:"")+">"+i.content+"</"+i.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,i=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),i&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&("loading"!==document.readyState?window.requestAnimationFrame?window.requestAnimationFrame(n.highlightAll):window.setTimeout(n.highlightAll,16):document.addEventListener("DOMContentLoaded",n.highlightAll))),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+Prism.languages.markup={comment:/<!--[\w\W]*?-->/,prolog:/<\?[\w\W]+?\?>/,doctype:/<!DOCTYPE[\w\W]+?>/i,cdata:/<!\[CDATA\[[\w\W]*?]]>/i,tag:{pattern:/<\/?(?!\d)[^\s>\/=$<]+(?:\s+[^\s>\/=]+(?:=(?:("|')(?:\\\1|\\?(?!\1)[\w\W])*\1|[^\s'">=]+))?)*\s*\/?>/i,inside:{tag:{pattern:/^<\/?[^\s>\/]+/i,inside:{punctuation:/^<\/?/,namespace:/^[^\s>\/:]+:/}},"attr-value":{pattern:/=(?:('|")[\w\W]*?(\1)|[^\s>]+)/i,inside:{punctuation:/[=>"']/}},punctuation:/\/?>/,"attr-name":{pattern:/[^\s>\/]+/,inside:{namespace:/^[^\s>\/:]+:/}}}},entity:/&#?[\da-z]{1,8};/i},Prism.hooks.add("wrap",function(a){"entity"===a.type&&(a.attributes.title=a.content.replace(/&amp;/,"&"))}),Prism.languages.xml=Prism.languages.markup,Prism.languages.html=Prism.languages.markup,Prism.languages.mathml=Prism.languages.markup,Prism.languages.svg=Prism.languages.markup;
+Prism.languages.css={comment:/\/\*[\w\W]*?\*\//,atrule:{pattern:/@[\w-]+?.*?(;|(?=\s*\{))/i,inside:{rule:/@[\w-]+/}},url:/url\((?:(["'])(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1|.*?)\)/i,selector:/[^\{\}\s][^\{\};]*?(?=\s*\{)/,string:{pattern:/("|')(\\(?:\r\n|[\w\W])|(?!\1)[^\\\r\n])*\1/,greedy:!0},property:/(\b|\B)[\w-]+(?=\s*:)/i,important:/\B!important\b/i,"function":/[-a-z0-9]+(?=\()/i,punctuation:/[(){};:]/},Prism.languages.css.atrule.inside.rest=Prism.util.clone(Prism.languages.css),Prism.languages.markup&&(Prism.languages.insertBefore("markup","tag",{style:{pattern:/(<style[\w\W]*?>)[\w\W]*?(?=<\/style>)/i,lookbehind:!0,inside:Prism.languages.css,alias:"language-css"}}),Prism.languages.insertBefore("inside","attr-value",{"style-attr":{pattern:/\s*style=("|').*?\1/i,inside:{"attr-name":{pattern:/^\s*style/i,inside:Prism.languages.markup.tag.inside},punctuation:/^\s*=\s*['"]|['"]\s*$/,"attr-value":{pattern:/.+/i,inside:Prism.languages.css}},alias:"language-css"}},Prism.languages.markup.tag));
+</script>
+
+  </body>
+</html>

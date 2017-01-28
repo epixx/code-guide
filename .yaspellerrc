@@ -1,0 +1,24 @@
+{
+  "excludeFiles": [
+    ".git",
+    "node_modules"
+  ],
+  "lang": "ru",
+  "fileExtensions": [
+    ".md",
+    ".html",
+    ".css"
+  ],
+  "dictionary": [
+    "Кодгайд",
+    "вендорными",
+    "вендорный",
+    "вендорные",
+    "слэш",
+    "ричные",
+    "транслит"
+  ],
+  "ignoreTags": ["script"],
+  "ignoreUrls": true,
+  "findRepeatWords": false
+}
