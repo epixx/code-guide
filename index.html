@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="ru">
   <head>
@@ -59,6 +58,9 @@
         <a href="#css-declaration-order">Порядок объявления</a>
       </li>
       <li>
+        <a href="#css-shorthand">Сокращенная запись</a>
+      </li>
+      <li>
         <a href="#css-import">Не используйте @import</a>
       </li>
       <li>
@@ -66,9 +68,6 @@
       </li>
       <li>
         <a href="#css-prefixed-properties">Свойства с префиксами</a>
-      </li>
-      <li>
-        <a href="#css-shorthand">Сокращенная запись</a>
       </li>
     </ul>
   </div>
@@ -101,7 +100,7 @@
       <li>Теги и атрибуты пишите строчными буквами.</li>
       <li>Используйте отступы с двумя пробелами. Разместите файл <a href="https://github.com/epixx/code-guide/blob/master/.editorconfig">.editorconfig</a> (универсальные базовые настройки редактора) в папке проекта и <a href="http://editorconfig.org/#download">установите его поддержку</a> в редакторе.</li>
       <li>Вложенные элементы должны иметь отступ. Некоторые теги («<dfn title="Сейчас нет разделения на блочные и строчные теги, поэтому термин взят в кавычки.">изначально-строчные</dfn>», к примеру: <code>a</code>, <code>span</code>, <code>small</code>, <code>strong</code>, <code>em</code>, <code>i</code>, <code>kbd</code>, <code>code</code>) допустимо не переносить на новые строки.</li>
-      <li>В атрибутах всегда используйте двойные кавычки, но не одинарные.</li>
+      <li>Значения атрибутов всегда пишите в двойных кавычках.</li>
       <li>Не добавляйте слэш (<code>/</code>) в конец одиночного тега.</li>
       <li>Не пропускайте необязательные закрывающие теги (например, <code>&lt;/li&gt;</code> или <code>&lt;/body&gt;</code>).</li>
     </ul>
@@ -166,8 +165,8 @@
 <div class="section" id="html-attribute-order">
   <div class="col">
     <h3>Порядок атрибутов</h3>
-    <p>Указывайте атрибут <code>class</code> первым, а <code>data-*</code>, <code>aria-*</code>, <code>role</code> и логические атрибуты последними.</p>
     <p>Очередность атрибутов должна быть единообразной.</p>
+    <p>Указывайте атрибуты <code>data-*</code>, <code>aria-*</code>, <code>role</code> и логические атрибуты последними.</p>
   </div>
   <div class="col">
     <pre>
@@ -266,7 +265,7 @@
     <h3>Селекторы</h3>
     <ul>
       <li>Используйте классы.</li>
-      <li>Используйте короткие селекторы — избегайте составных селекторов.</li>
+      <li>Используйте короткие селекторы — избегайте составных селекторов (если не используете <a href="https://ru.bem.info/methodology/naming-convention/">именование по БЭМ</a>, составные селекторы допустимы).</li>
       <li>Избегайте тегов в селекторах.</li>
       <li>Записывайте имена классов строчными буквами и используйте дефис <code>-</code> в местах разделения слов (не используйте как разделитель слов <b>один символ</b> нижнего подчеркивания, не используйте camelCase).</li>
       <li>Используйте английский язык. Не используйте транслит.</li>
@@ -311,7 +310,6 @@
     </ol>
     <p>Позиционирование может удалить элемент из нормального потока документа и переопределить блочную модель связанных стилей, поэтому указывайте его первым. Блочная модель диктует размеры и расположение компонента, пишите ее второй.</p>
     <p>В примере кода группы правил разделены пустыми строками. Делать такие разделители не обязательно.</p>
-    <p>В случае совместного использования сокращенной и полной записи свойств, первым пишите сокращенную версию.</p>
   </div>
   <div class="col">
     <pre>
@@ -338,6 +336,33 @@
       <code class="lang-css">  opacity: 1;</code>
       <code class="lang-css">   </code>
       <code class="lang-css">  transition: all 0.3s;</code>
+      <code class="lang-css">}</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="css-shorthand">
+  <div class="col">
+    <h3>Сокращенная запись</h3>
+    <p>Избегайте сокращенных объявлений. К примеру, если нужно задать только нижний внешний отступ, пишите <code>margin-bottom: 10px;</code> вместо <code>margin: 0 0 10px;</code></p>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-css">/* Хорошо */</code>
+      <code class="lang-css">.element {</code>
+      <code class="lang-css">  margin-bottom: 10px;</code>
+      <code class="lang-css">  background-color: red;</code>
+      <code class="lang-css">  background-image: url("image.jpg");</code>
+      <code class="lang-css">  border-top-left-radius: 3px;</code>
+      <code class="lang-css">  border-top-right-radius: 3px;</code>
+      <code class="lang-css">}</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">/* Плохо */</code>
+      <code class="lang-css">.element {</code>
+      <code class="lang-css">  margin: 0 0 10px;</code>
+      <code class="lang-css">  background: red;</code>
+      <code class="lang-css">  background: url("image.jpg");</code>
+      <code class="lang-css">  border-radius: 3px 3px 0 0;</code>
       <code class="lang-css">}</code>
     </pre>
   </div>
@@ -409,33 +434,6 @@
       <code class="lang-css">.selector {</code>
       <code class="lang-css">  -webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.15);</code>
       <code class="lang-css">          box-shadow: 0 1px 2px rgba(0,0,0,0.15);</code>
-      <code class="lang-css">}</code>
-    </pre>
-  </div>
-</div>
-
-<div class="section" id="css-shorthand">
-  <div class="col">
-    <h3>Сокращенная запись</h3>
-    <p>Избегайте сокращенных объявлений.</p>
-  </div>
-  <div class="col">
-    <pre>
-      <code class="lang-css">/* Хорошо */</code>
-      <code class="lang-css">.element {</code>
-      <code class="lang-css">  margin-bottom: 10px;</code>
-      <code class="lang-css">  background-color: red;</code>
-      <code class="lang-css">  background-image: url("image.jpg");</code>
-      <code class="lang-css">  border-top-left-radius: 3px;</code>
-      <code class="lang-css">  border-top-right-radius: 3px;</code>
-      <code class="lang-css">}</code>
-      <code class="lang-css"> </code>
-      <code class="lang-css">/* Плохо */</code>
-      <code class="lang-css">.element {</code>
-      <code class="lang-css">  margin: 0 0 10px;</code>
-      <code class="lang-css">  background: red;</code>
-      <code class="lang-css">  background: url("image.jpg");</code>
-      <code class="lang-css">  border-radius: 3px 3px 0 0;</code>
       <code class="lang-css">}</code>
     </pre>
   </div>
