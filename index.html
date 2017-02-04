@@ -58,6 +58,9 @@
         <a href="#css-declaration-order">Порядок объявления</a>
       </li>
       <li>
+        <a href="#fast-read">Быстрое чтение</a>
+      </li>
+      <li>
         <a href="#css-shorthand">Сокращенная запись</a>
       </li>
       <li>
@@ -336,6 +339,31 @@
       <code class="lang-css">  opacity: 1;</code>
       <code class="lang-css">   </code>
       <code class="lang-css">  transition: all 0.3s;</code>
+      <code class="lang-css">}</code>
+    </pre>
+  </div>
+</div>
+
+<div class="section" id="fast-read">
+  <div class="col">
+    <h3>Быстрое чтение</h3>
+    <p>Оставляте пустую строку перед селектором или группой селекторов.</p>
+    <p>Работая с CSS-препроцессорами, оставляйте пустую строку перед любым вложенным селектором и <code>@media</code>.</p>
+  </div>
+  <div class="col">
+    <pre>
+      <code class="lang-css">/* В CSS-файле: */</code>
+      <code class="lang-css">.promo {...}</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">.gallery {...}</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">/* В препроцессорном файле: */</code>
+      <code class="lang-css">.promo {</code>
+      <code class="lang-css">  display: block;</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">  &__container {...}</code>
+      <code class="lang-css"> </code>
+      <code class="lang-css">  &__item {...}</code>
       <code class="lang-css">}</code>
     </pre>
   </div>
